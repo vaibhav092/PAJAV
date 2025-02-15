@@ -1,65 +1,50 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-    const [activeSection, setActiveSection] = useState('home');
-
-    const scrollToSection = (sectionId) => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setActiveSection(sectionId);
-        }
-    };
+    const location = useLocation();
+    const [activeSection, setActiveSection] = useState(location.pathname.slice(1) || 'home');
 
     return (
         <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-green-100 to-emerald-200 shadow-md py-1 z-50">
             <div className="container mx-auto px-4 flex justify-between items-center">
-                <div className='w-25 h-25'>
-            <img src="Logo.png" alt="" />
+                <div className="w-25 h-25">
+                    <img src="Logo.png" alt="" />
                 </div>
                 <nav className="space-x-6">
-                    <a
-                        href="#home"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            scrollToSection('home');
-                        }}
+                    <Link
+                        to="/"
                         className={`text-lg font-medium transition-colors duration-200
                             ${activeSection === 'home' 
                                 ? 'text-green-800 border-b-2 border-green-800' 
                                 : 'text-green-700 hover:text-green-900'}`}
+                        onClick={() => setActiveSection('home')}
                     >
                         Home
-                    </a>
-                    <a
-                        href="#about"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            scrollToSection('about');
-                        }}
+                    </Link>
+                    <Link
+                        to="/about"
                         className={`text-lg font-medium transition-colors duration-200
                             ${activeSection === 'about' 
                                 ? 'text-green-800 border-b-2 border-green-800' 
                                 : 'text-green-700 hover:text-green-900'}`}
+                        onClick={() => setActiveSection('about')}
                     >
                         About
-                    </a>
-                    <a
-                        href="#team"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            scrollToSection('team');
-                        }}
+                    </Link>
+                    <Link
+                        to="/team"
                         className={`text-lg font-medium transition-colors duration-200
                             ${activeSection === 'team' 
                                 ? 'text-green-800 border-b-2 border-green-800' 
                                 : 'text-green-700 hover:text-green-900'}`}
+                        onClick={() => setActiveSection('team')}
                     >
                         Team
-                    </a>
+                    </Link>
                 </nav>
-                <div className='w-20 h-20'>
-                        <img src="https://alumni.mait.ac.in/images/MAIT/Mait_Logo.png" alt="" />
+                <div className="w-20 h-20">
+                    <img src="https://alumni.mait.ac.in/images/MAIT/Mait_Logo.png" alt="" />
                 </div>
             </div>
         </header>
