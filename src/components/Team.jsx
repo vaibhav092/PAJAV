@@ -139,8 +139,8 @@ function Team() {
     ];
   return (
     <div className='h-full bg-gradient-to-br from-green-200 via-teal-300 to-cyan-400 text-xl mt-10'>
-            <div id='team' className='mt-26'>
-    <div className="max-w-7xl mx-auto p-6">
+    <div id='team' className='mt-26'>
+    <div className="max-w-[1500px] mx-auto p-6">
       <header className="mb-12">
         <h2 className="text-3xl font-bold text-green-900 flex items-center gap-3">
           <Users className="h-8 w-8" />

@@ -4,6 +4,7 @@ import Home from './components/Home';
 import About from './components/About.jsx';
 import Team from './components/Team.jsx';
 import Layout from './Layout';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
     return (

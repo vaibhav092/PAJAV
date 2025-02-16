@@ -6,7 +6,7 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState(location.pathname.slice(1) || 'home');
 
     return (
-        <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-green-100 to-emerald-200 shadow-md py-1 z-50">
+        <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-green-100 to-emerald-200 shadow-md py-1 z-50 ">
             <div className="container mx-auto px-4 flex justify-between items-center">
                 <div className="w-25 h-25">
                     <img src="Logo.png" alt="" />
