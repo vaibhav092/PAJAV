@@ -4,11 +4,11 @@ import { User2, Wind, Droplet, Flame, Globe, BookOpen, Users, Lightbulb, Earth }
 function About() {
   return (
     <div className='h-full bg-gradient-to-br from-green-200 via-teal-300 to-cyan-400 text-xl'>
-            <div  className="mt-26" id='about'>
-    <div className="max-w-4xl mx-auto p-6 space-y-10">
+    <div  className="mt-26" id='about'>
+    <div className="max-w-[1500px] mx-auto p-6 space-y-10">
       {/* Header */}
       <header className="mb-8">
-        <h2 className="text-3xl font-bold text-green-900 mb-4">About Society PAJAV</h2>
+        <h2 className="text-3xl text-center font-bold text-green-900 mb-4">About Society PAJAV</h2>
       </header>
 
       {/* Who We Are */}
